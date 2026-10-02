@@ -20,6 +20,9 @@ export const VideoPlayer: React.FC<Props> = ({ config, videoElRef, onVideoReady 
   const [ended, setEnded] = useState(false);
   const [playing, setPlaying] = useState(false);
   const [metaReady, setMetaReady] = useState(false);
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
 
   useEffect(() => {
     const video = videoRef.current;
@@ -81,10 +84,10 @@ export const VideoPlayer: React.FC<Props> = ({ config, videoElRef, onVideoReady 
   };
 
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${isFullscreen ? styles.fullscreen : ''}`}>
       <video
         ref={videoRef}
-        controls={!playing}
+        controls={!playing && !isFullscreen}
         src={config.videoSrc}
         className={styles.video}
         onEnded={() => setEnded(true)}
@@ -160,6 +163,13 @@ export const VideoPlayer: React.FC<Props> = ({ config, videoElRef, onVideoReady 
           </div>
         );
       })()}
+      <button
+        type="button"
+        className={styles.fullscreenBtn}
+        onClick={() => setIsFullscreen(!isFullscreen)}
+      >
+        {isFullscreen ? '元のサイズに戻す' : '全画面表示'}
+      </button>
     </div>
   );
 };
