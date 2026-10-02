@@ -1,0 +1,62 @@
+/* OverlayButton.module.css */
+
+.btn {
+  /* overlayLayer 内の絶対配置。top/left はインラインで注入 */
+  position: absolute;
+  /* 中心基点で配置（top/left が示す座標がボタンの中央になる） */
+  transform: translate(-50%, -50%);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+ background-color: rgba(0, 0, 0, 0.72);
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  border-radius: 0.4em; /* px固定 → em化。角丸も文字サイズに連動 */
+  /* フォントをゴシック体に明示指定 */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", MeiRyo, sans-serif;
+  /* 動画幅(--vw)に連動したフォントサイズ。JSONのstyleで上書きされればそちらが優先 */
+  font-size: clamp(10px, calc(var(--vw) * 0.028), 16px);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  /* padding を em にすることで font-size と一緒に伸縮する */
+  padding: 0.5em 1em;
+  white-space: nowrap;
+  cursor: pointer;
+  text-decoration: none;
+  user-select: none;
+  pointer-events: auto;
+
+  /* フェードアニメーション */
+  transition:
+    opacity 0.5s ease,
+    visibility 0.5s ease;
+}
+
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: #ffffff;
+}
+
+.btn:focus-visible {
+  outline: 3px solid #4fc3f7;
+  outline-offset: 3px;
+}
+
+.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}

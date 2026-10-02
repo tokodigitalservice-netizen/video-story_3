@@ -1,0 +1,7 @@
+{
+  "version": "2.0",
+  "title": "サンプル動画",
+  "videoSrc": "https://toko-data-bucket.toko-digital-lab.workers.dev/interactive/movie/sub_b03.mp4",
+  "videoType": "mp4",
+  "buttonGroups": []
+}

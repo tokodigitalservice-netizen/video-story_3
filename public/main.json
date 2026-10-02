@@ -1,0 +1,160 @@
+{
+  "version": "2.0",
+  "title": "サンプル動画",
+  "videoSrc": "https://toko-data-bucket.toko-digital-lab.workers.dev/interactive/movie/main.mp4",
+  "videoType": "mp4",
+  "buttonGroups": [
+    {
+      "showAt": 10,
+      "hideAt": 28,
+      "top": 80,
+      "buttons": [
+        {
+          "id": "btn-intro-cta-left",
+          "label": "年代別スマホ所有率",
+          "href": "https://video-story.pages.dev/?config=sub_a01.json",
+          "modalConfig": "/sub_a01.json",
+          "type": "modal",
+          "target": "_blank",
+          "analyticsLabel": "intro_cta_left",
+          "style": {
+            "border": "1px solid #ffffff",
+            "backgroundColor": "#0066cc",
+            "color": "#ffffff",
+            "fontSize": "1.5rem",
+            "fontWeight": "bold",
+            "borderRadius": "12px",
+            "width": "35vw%",
+            "height": "10vh%",
+            "cursor": "pointer",
+            "display": "flex",
+            "alignItems": "center",
+            "justifyContent": "center"
+              }
+        },
+        {
+          "id": "btn-intro-cta-right",
+          "label": "年別スマホ所有率",
+          "href": "https://video-story.pages.dev/?config=sub_a02.json",
+          "modalConfig": "/sub_a02.json",
+          "type": "modal",
+          "target": "_blank",
+          "analyticsLabel": "intro_cta_right",
+          "style": {
+            "border": "1px solid #ffffff",
+            "backgroundColor": "#0066cc",
+            "color": "#ffffff",
+            "fontSize": "1.5rem",
+            "fontWeight": "bold",
+            "borderRadius": "12px",
+            "width": "35vw%",
+            "height": "10vh%",
+            "cursor": "pointer",
+            "display": "flex",
+            "alignItems": "center",
+            "justifyContent": "center"
+              }
+        }
+      ]
+    },
+    {
+      "showAt": 31,
+      "hideAt": 49,
+      "top": 80,
+      "buttons": [
+        {
+          "id": "btn-second-cta-1",
+          "label": "高精度",
+          "href": "https://video-story.pages.dev/?config=sub_b01.json",
+          "modalConfig": "/sub_b01.json",
+          "type": "modal",
+          "target": "_blank",
+          "analyticsLabel": "second_cta_1",
+      "style": {
+        "border": "1px solid #ffffff",
+        "backgroundColor": "#0066cc",
+        "color": "#ffffff",
+        "fontSize": "1.5rem",
+        "fontWeight": "bold",
+        "borderRadius": "12px",
+        "width": "20vw%",
+        "height": "10vh%",
+        "cursor": "pointer",
+        "display": "flex",
+        "alignItems": "center",
+        "justifyContent": "center"
+          }
+        },
+        {
+          "id": "btn-second-cta-2",
+          "label": "低予算",
+          "href": "https://video-story.pages.dev/?config=sub_b02.json",
+          "modalConfig": "/sub_b02.json",
+          "type": "modal",
+          "target": "_blank",
+          "analyticsLabel": "second_cta_2",
+      "style": {
+        "border": "1px solid #ffffff",
+        "backgroundColor": "#0066cc",
+        "color": "#ffffff",
+        "fontSize": "1.5rem",
+        "fontWeight": "bold",
+        "borderRadius": "12px",
+        "width": "20vw%",
+        "height": "10vh%",
+        "cursor": "pointer",
+        "display": "flex",
+        "alignItems": "center",
+        "justifyContent": "center"
+          }
+        },
+               {
+          "id": "btn-second-cta-3",
+          "label": "可視化",
+          "href": "https://video-story.pages.dev/?config=sub_b03.json",
+          "modalConfig": "/sub_b03.json",
+          "type": "modal",
+          "target": "_blank",
+          "analyticsLabel": "second_cta_3",
+      "style": {
+        "border": "1px solid #ffffff",
+        "backgroundColor": "#0066cc",
+        "color": "#ffffff",
+        "fontSize": "1.5rem",
+        "fontWeight": "bold",
+        "borderRadius": "12px",
+        "width": "20vw%",
+        "height": "10vh%",
+        "cursor": "pointer",
+        "display": "flex",
+        "alignItems": "center",
+        "justifyContent": "center"
+          }
+        },
+        {
+          "id": "btn-second-cta-4",
+          "label": "自由度",
+          "href": "https://video-story.pages.dev/?config=sub_b04.json",
+          "modalConfig": "/sub_b04.json",
+          "type": "modal",
+          "target": "_blank",
+          "analyticsLabel": "second_cta_4",
+      "style": {
+        "border": "1px solid #ffffff",
+        "backgroundColor": "#0066cc",
+        "color": "#ffffff",
+        "fontSize": "1.5rem",
+        "fontWeight": "bold",
+        "borderRadius": "12px",
+        "width": "20vw%",
+        "height": "10vh%",
+        "cursor": "pointer",
+        "display": "flex",
+        "alignItems": "center",
+        "justifyContent": "center"
+          }
+        }
+      ]
+    }
+  ]
+}

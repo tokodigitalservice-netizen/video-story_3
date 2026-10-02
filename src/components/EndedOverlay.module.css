@@ -1,0 +1,56 @@
+/* EndedOverlay.module.css */
+
+.overlay {
+  /* overlayLayer(position:absolute)の全面を覆う */ 
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  background: rgba(0, 0, 0, 0.01);
+  /* 中央寄せ */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  padding: 0 4%;
+}
+
+.replayBtn {
+  padding: 0.3em 0.9em;
+  border-radius: 8px;
+  font-size: clamp(18px, calc(var(--vw) * 0.05), 40px);
+  font-weight: 600;
+  cursor: pointer;
+  /* 半透明の白背景 */
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.06em;
+  transition: background 0.2s;
+  /* ボタン自体のフォントリセット（親CSSの影響を受けないよう） */
+  font-family: sans-serif;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.replayBtn:hover {
+  background: rgba(255, 255, 255, 0.28);
+}
+
+/* overlayLayer が pointer-events:none なので明示的に有効化 */
+.overlay {
+  pointer-events: auto;
+}

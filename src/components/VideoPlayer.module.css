@@ -1,0 +1,54 @@
+/* VideoPlayer.module.css */
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 80%;
+  background: #000;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.video {
+  display: block;
+  width: 100%;
+  height: 80%;
+  object-fit: contain;
+}
+
+/* 実描画エリアに重ねるレイヤー。left/top/width/height はインラインで注入 */
+.overlayLayer {
+  position: absolute;
+  pointer-events: none;
+  z-index: 10;
+  overflow: hidden;
+}
+
+/* 未再生時の再生ボタンオーバーレイ：overlayLayer全体を覆う */
+.playOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 20;
+  pointer-events: auto; /* overlayLayerのnoneを上書き */
+}
+
+.playButton {
+  width: 80px;
+  height: 80px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #fff;
+  transition: background 0.2s;
+}
+
+.playOverlay:hover .playButton {
+  background: rgba(0, 0, 0, 0.6);
+}
