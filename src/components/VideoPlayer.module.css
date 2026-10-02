@@ -52,3 +52,42 @@
 .playOverlay:hover .playButton {
   background: rgba(0, 0, 0, 0.6);
 }
+
+/* =========================================================
+   ↓↓↓ ここから下が新しく追加した全画面用のスタイルです ↓↓↓
+   ========================================================= */
+
+/* 全画面表示中のコンテナ（固定表示で最前面へ） */
+.fullscreen {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: 99999 !important; /* 他のすべての要素の上に表示 */
+  background: #000;
+  max-width: none !important;
+  aspect-ratio: auto !important; /* アスペクト比固定を解除して画面いっぱいに広げる */
+}
+
+/* 全画面表示中の動画のサイズ指定 */
+.fullscreen .video {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain;
+}
+
+/* 自作の全画面切替ボタン */
+.fullscreenBtn {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  z-index: 100000; /* 動画やレイヤーより前面 */
+  padding: 6px 12px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+}
