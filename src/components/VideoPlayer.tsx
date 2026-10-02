@@ -82,6 +82,14 @@ export const VideoPlayer: React.FC<Props> = ({ config, videoElRef, onVideoReady 
     video.currentTime = 0;
     video.play();
   };
+  const toggleFullscreen = () => {
+    setIsFullscreen((prev) => !prev);
+
+    // 画面サイズ変更を通知してボタン位置を再計算させる
+    setTimeout(() => {
+      window.dispatchEvent(new Event("resize"));
+    }, 100);
+  };
 
   return (
     <div className={`${styles.container} ${isFullscreen ? styles.fullscreen : ''}`}>
@@ -166,7 +174,7 @@ export const VideoPlayer: React.FC<Props> = ({ config, videoElRef, onVideoReady 
       <button
         type="button"
         className={styles.fullscreenBtn}
-        onClick={() => setIsFullscreen(!isFullscreen)}
+        onClick={toggleFullscreen}
       >
         {isFullscreen ? '元のサイズに戻す' : '全画面表示'}
       </button>
